@@ -1,0 +1,42 @@
+{
+  "name": "pco-client",
+  "version": "0.0.0",
+  "description": "Javascript client for the Planning Center Online API",
+  "type": "module",
+  "source": "src/index.ts",
+  "main": "lib/main.js",
+  "types": "lib/types.d.ts",
+  "scripts": {
+    "build": "parcel build",
+    "clean": "npx rimraf lib",
+    "lint": "eslint . --ext .ts --fix",
+    "prettier": "prettier --write 'src/**/*.+(ts|tsx|json)'",
+    "release": "release-it",
+    "watch": "parcel watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brannonh/pco-client.git"
+  },
+  "author": "Brannon Hall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brannonh/pco-client/issues"
+  },
+  "homepage": "https://github.com/brannonh/pco-client#readme",
+  "devDependencies": {
+    "@parcel/packager-ts": "latest",
+    "@parcel/transformer-typescript-types": "latest",
+    "@release-it/keep-a-changelog": "^3.1.0",
+    "@tsconfig/recommended": "^1.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "parcel": "latest",
+    "prettier": "^2.8.8",
+    "release-it": "^15.11.0",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.3"
+  }
+}
