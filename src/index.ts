@@ -1,3 +1,1 @@
-export function HelloPCO() {
-  return 'Hello, PCO!';
-}
+export * from './pco-api-client.js';
