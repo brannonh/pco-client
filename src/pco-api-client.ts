@@ -1,4 +1,4 @@
-import { ApplicationConfig, ApplicationResponse } from './application/application.js';
+import { ApplicationConfig } from './application/application.js';
 import { Giving } from './application/giving.js';
 import { defaultsDeep } from 'lodash-es';
 import { HttpClient } from './http-client/index.js';
