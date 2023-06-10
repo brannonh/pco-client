@@ -16,6 +16,10 @@ Types of Changes
 
 ## [Unreleased]
 
+### Added
+
+- Added support for application-level GET requests.
+
 ## [0.0.0]
 
 ### Added
