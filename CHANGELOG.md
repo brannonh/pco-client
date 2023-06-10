@@ -15,3 +15,9 @@ Types of Changes
 - `Security` in case of vulnerabilities.
 
 ## [Unreleased]
+
+## [0.0.0]
+
+### Added
+
+- Initialized repository.
