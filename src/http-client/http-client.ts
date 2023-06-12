@@ -5,7 +5,7 @@ export interface HttpClientConfig {
   auth: {
     token?: string;
     secret?: string;
-  }
+  };
 }
 
 export class HttpClient {
@@ -18,7 +18,11 @@ export class HttpClient {
   put: GotRequestFunction;
 
   constructor(config: HttpClientConfig) {
-    this.client = got.extend(logging(), pcoApi(), auth(config.auth.token ?? '', config.auth.secret ?? '' ));
+    this.client = got.extend(
+      logging(),
+      pcoApi(),
+      auth(config.auth.token ?? '', config.auth.secret ?? '')
+    );
 
     this.delete = this.client.delete;
     this.get = this.client.get;
