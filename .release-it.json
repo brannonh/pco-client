@@ -14,8 +14,7 @@
     "releaseName": "v${version}"
   },
   "npm": {
-    "publish": true,
-    "publishPath": "lib/"
+    "publish": true
   },
   "plugins": {
     "@release-it/keep-a-changelog": {
