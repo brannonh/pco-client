@@ -6,7 +6,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'prettier',
   ],
-  ignorePatterns: ['.eslintrc.cjs'],
+  ignorePatterns: ['.eslintrc.cjs', 'lib/**/*'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: true,

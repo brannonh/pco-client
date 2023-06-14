@@ -9,8 +9,8 @@ import { People } from './application/people.js';
 import { Services } from './application/services.js';
 
 export interface PCOApiClientConfig {
-  apiVersion?: string;
-  applications?: PCOApiClientAppConfig;
+  apiVersion: string;
+  applications: PCOApiClientAppConfig;
   auth: PCOApiClientAuthPAT; // TODO: Add support for OAuth2.
 }
 
@@ -20,17 +20,15 @@ export interface PCOApiClientAuthPAT {
 }
 
 export interface PCOApiClientAppConfig {
-  calendar?: ApplicationConfig;
-  checkIns?: ApplicationConfig;
-  giving?: ApplicationConfig;
-  groups?: ApplicationConfig;
-  people?: ApplicationConfig;
-  services?: ApplicationConfig;
+  calendar: ApplicationConfig;
+  checkIns: ApplicationConfig;
+  giving: ApplicationConfig;
+  groups: ApplicationConfig;
+  people: ApplicationConfig;
+  services: ApplicationConfig;
 }
 
-export const PCOApiClientConfigDefaults: Required<
-  Omit<PCOApiClientConfig, 'auth'>
-> = {
+export const PCOApiClientConfigDefaults: Omit<PCOApiClientConfig, 'auth'> = {
   apiVersion: 'v2',
   applications: {
     calendar: {
@@ -69,41 +67,45 @@ export class PCOApiClient {
     this.client = new HttpClient({ auth: { token, secret } });
 
     defaultsDeep(options, PCOApiClientConfigDefaults);
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
     this.calendar = new Calendar(
       this.client,
-      options.apiVersion!,
-      options.applications!.calendar!
+      options.apiVersion,
+      options.applications.calendar
     );
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
     this.checkIns = new CheckIns(
       this.client,
-      options.apiVersion!,
-      options.applications!.checkIns!
+      options.apiVersion,
+      options.applications.checkIns
     );
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
     this.giving = new Giving(
       this.client,
-      options.apiVersion!,
-      options.applications!.giving!
+      options.apiVersion,
+      options.applications.giving
     );
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
     this.groups = new Groups(
       this.client,
-      options.apiVersion!,
-      options.applications!.groups!
+      options.apiVersion,
+      options.applications.groups
     );
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
     this.people = new People(
       this.client,
-      options.apiVersion!,
-      options.applications!.people!
+      options.apiVersion,
+      options.applications.people
     );
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
     this.services = new Services(
       this.client,
-      options.apiVersion!,
-      options.applications!.services!
+      options.apiVersion,
+      options.applications.services
     );
+  }
+
+  setDefaults(options: PCOApiClientConfig) {
+    defaultsDeep(options, PCOApiClientConfigDefaults);
   }
 }
