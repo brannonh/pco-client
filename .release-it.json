@@ -1,7 +1,8 @@
 {
   "hooks": {
-    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}.",
-    "before:init": ["npm run lint", "npm run prettier"]
+    "before:init": ["npm run lint", "npm run prettier"],
+    "after:bump": ["copyfiles package.json lib/"],
+    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "git": {
     "commitMessage": "Release v${version}",
