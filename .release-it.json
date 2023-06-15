@@ -1,7 +1,7 @@
 {
   "hooks": {
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}.",
-    "before:init": ["npm run prettier", "npm run lint"]
+    "before:init": ["npm run lint", "npm run prettier"]
   },
   "git": {
     "commitMessage": "Release v${version}",
@@ -14,7 +14,8 @@
     "releaseName": "v${version}"
   },
   "npm": {
-    "publish": true
+    "publish": true,
+    "publishPath": "./lib"
   },
   "plugins": {
     "@release-it/keep-a-changelog": {

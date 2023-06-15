@@ -16,17 +16,15 @@ Types of Changes
 
 ## [Unreleased]
 
+### Changed
+
+- Changed NPM publish path.
+
 ## [0.1.0] - 2023-06-13
 
 ### Added
 
 - Added support for application-level GET requests.
-
-## [0.0.0]
-
-### Added
-
-- Initialized repository.
 
 [unreleased]: https://github.com/brannonh/pco-client/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/brannonh/pco-client/releases/tag/v0.1.0
