@@ -19,6 +19,7 @@ Types of Changes
 ### Fixed
 
 - A packaging issue was causing invalid API URLs to be used.
+- A packaging issue was causing problems importing the client.
 
 ## [0.1.1] - 2023-06-15
 
