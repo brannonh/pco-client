@@ -1,5 +1,6 @@
 import { paramCase } from 'change-case';
 import { HttpClient } from '../http-client/index.js';
+import { trim } from 'lodash-es';
 
 export interface ApplicationConfig {
   version: string;
@@ -13,26 +14,24 @@ export interface ApplicationResponse {
 }
 
 export class Application {
-  constructorName: string;
   defaultHeaders: Record<string, string>;
 
   constructor(
     protected readonly client: HttpClient,
     protected readonly apiVersion: string,
+    protected readonly appPath: string,
     protected readonly config: ApplicationConfig
   ) {
-    this.constructorName = this.constructor.name;
     this.defaultHeaders = {
       'x-pco-api-version': this.config.version,
     };
+
+    this.appPath = trim(appPath, ' /');
   }
 
   prefixedPath(suffix?: string): string {
-    if (suffix && suffix[0] === '/') {
-      suffix = suffix.slice(1);
-    }
-    return `${paramCase(this.constructorName)}/${this.apiVersion}${
-      suffix ? '/' + suffix : ''
+    return `${paramCase(this.appPath)}/${this.apiVersion}${
+      suffix ? '/' + trim(suffix, ' /') : ''
     }`;
   }
 

@@ -16,6 +16,10 @@ Types of Changes
 
 ## [Unreleased]
 
+### Fixed
+
+- A packaging issue was causing invalid API URLs to be used.
+
 ## [0.1.1] - 2023-06-15
 
 ### Changed

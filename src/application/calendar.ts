@@ -7,6 +7,6 @@ export class Calendar extends Application {
     apiVersion: string,
     options: ApplicationConfig
   ) {
-    super(client, apiVersion, options);
+    super(client, apiVersion, 'calendar', options);
   }
 }

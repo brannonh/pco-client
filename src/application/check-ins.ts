@@ -7,6 +7,6 @@ export class CheckIns extends Application {
     apiVersion: string,
     options: ApplicationConfig
   ) {
-    super(client, apiVersion, options);
+    super(client, apiVersion, 'check-ins', options);
   }
 }
