@@ -16,6 +16,10 @@ Types of Changes
 
 ## [Unreleased]
 
+### Changed
+
+- Client configuration is now optional at every level with sane defaults.
+
 ### Fixed
 
 - A packaging issue was causing invalid API URLs to be used.
