@@ -6,9 +6,7 @@
   "source": "src/index.ts",
   "main": "dist/main.js",
   "types": "dist/types.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "parcel build",
     "build:clean": "npm run clean && npm run build",

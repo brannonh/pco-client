@@ -16,6 +16,10 @@ Types of Changes
 
 ## [Unreleased]
 
+### Fixed
+
+- Release process was not including some files.
+
 ## [0.1.3] - 2023-07-06
 
 ### Changed
