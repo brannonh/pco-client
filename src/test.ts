@@ -1,4 +1,4 @@
-import { PCOApiClient } from './pco-api-client.js';
+import { PCOApiClient } from './pco-api-client/pco-api-client.js';
 import { token, secret } from '../.env.js';
 
 const client = new PCOApiClient({
@@ -8,21 +8,11 @@ const client = new PCOApiClient({
   },
 });
 
-client.calendar.get().then((response: unknown) => {
-  console.dir(response);
-}, undefined);
-client.checkIns.get().then((response: unknown) => {
-  console.dir(response);
-}, undefined);
-client.giving.get().then((response: unknown) => {
-  console.dir(response);
-}, undefined);
-client.groups.get().then((response: unknown) => {
-  console.dir(response);
-}, undefined);
-client.people.get().then((response: unknown) => {
-  console.dir(response);
-}, undefined);
-client.services.get().then((response: unknown) => {
-  console.dir(response);
+console.log(client.getAppPaths('giving'));
+// const json = { data: { type: 'Batch', attributes: { description: 'PCO API Client Test' } } };
+// client.callAppPath('giving', 'createBatch', { id: '123' }, { json }).then((value) => {
+//   console.dir(value);
+// }, undefined);
+client.giving('readDonations').then((value) => {
+  console.dir(value);
 }, undefined);

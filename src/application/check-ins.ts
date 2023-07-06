@@ -1,12 +1,11 @@
-import { HttpClient } from '../http-client/index.js';
-import { Application, ApplicationConfig } from './application.js';
+import { PathFactoryFunction } from '../pco-api-client/types.js';
+import { ApplicationConfig } from './application.js';
 
-export class CheckIns extends Application {
-  constructor(
-    client: HttpClient,
-    apiVersion: string,
-    options: ApplicationConfig
-  ) {
-    super(client, apiVersion, 'check-ins', options);
-  }
-}
+const paths = new Map<string, PathFactoryFunction>([]);
+
+export const CheckInsConfigDefault: ApplicationConfig = {
+  apiVersion: 'v2',
+  appVersion: '2023-04-05',
+  name: 'checkIns',
+  paths,
+};

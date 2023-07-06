@@ -1,15 +1,9 @@
 import got, { Got, GotRequestFunction } from 'got';
 import { auth, logging, pcoApi } from './got.js';
-
-export interface HttpClientConfig {
-  auth: {
-    token?: string;
-    secret?: string;
-  };
-}
+import { HttpClientConfig } from './types.js';
 
 export class HttpClient {
-  client: Got;
+  private client: Got;
   delete: GotRequestFunction;
   get: GotRequestFunction;
   head: GotRequestFunction;
@@ -21,7 +15,7 @@ export class HttpClient {
     this.client = got.extend(
       logging(),
       pcoApi(),
-      auth(config.auth.token ?? '', config.auth.secret ?? '')
+      auth(config.auth?.token ?? '', config.auth?.secret ?? '')
     );
 
     this.delete = this.client.delete;

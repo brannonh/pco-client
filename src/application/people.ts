@@ -1,12 +1,11 @@
-import { HttpClient } from '../http-client/index.js';
-import { Application, ApplicationConfig } from './application.js';
+import { PathFactoryFunction } from '../pco-api-client/types.js';
+import { ApplicationConfig } from './application.js';
 
-export class People extends Application {
-  constructor(
-    client: HttpClient,
-    apiVersion: string,
-    options: ApplicationConfig
-  ) {
-    super(client, apiVersion, 'people', options);
-  }
-}
+const paths = new Map<string, PathFactoryFunction>([]);
+
+export const PeopleConfigDefault: ApplicationConfig = {
+  apiVersion: 'v2',
+  appVersion: '2023-03-21',
+  name: 'people',
+  paths,
+};

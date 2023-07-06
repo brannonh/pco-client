@@ -1,9 +1,18 @@
-import { paramCase } from 'change-case';
-import { HttpClient } from '../http-client/index.js';
-import { trim } from 'lodash-es';
+import { PathFactoryFunction } from '../pco-api-client/types.js';
+
+export type ApplicationName =
+  | 'calendar'
+  | 'checkIns'
+  | 'giving'
+  | 'groups'
+  | 'people'
+  | 'services';
 
 export interface ApplicationConfig {
-  version: string;
+  apiVersion: string;
+  appVersion: string;
+  name: ApplicationName;
+  paths: Map<string, PathFactoryFunction>;
 }
 
 export interface ApplicationResponse {
@@ -13,32 +22,4 @@ export interface ApplicationResponse {
   meta: unknown;
 }
 
-export class Application {
-  defaultHeaders: Record<string, string>;
-
-  constructor(
-    protected readonly client: HttpClient,
-    protected readonly apiVersion: string,
-    protected readonly appPath: string,
-    protected readonly config: ApplicationConfig
-  ) {
-    this.defaultHeaders = {
-      'x-pco-api-version': this.config.version,
-    };
-
-    this.appPath = trim(appPath, ' /');
-  }
-
-  prefixedPath(suffix?: string): string {
-    return `${paramCase(this.appPath)}/${this.apiVersion}${
-      suffix ? '/' + trim(suffix, ' /') : ''
-    }`;
-  }
-
-  async get(path?: string): Promise<ApplicationResponse> {
-    const headers = this.defaultHeaders;
-    return this.client
-      .get<ApplicationResponse>(this.prefixedPath(path), { headers })
-      .json();
-  }
-}
+export type AppConfigurations = Record<ApplicationName, ApplicationConfig>;

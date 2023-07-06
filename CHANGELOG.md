@@ -16,6 +16,11 @@ Types of Changes
 
 ## [Unreleased]
 
+### Changed
+
+- Restructured client.
+- Updated release process.
+
 ## [0.1.2] - 2023-06-15
 
 ### Changed

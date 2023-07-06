@@ -1,7 +1,7 @@
 {
   "hooks": {
     "before:init": ["npm run verify", "npm run build:clean"],
-    "after:bump": ["copyfiles package.json lib/"],
+    "after:bump": ["copyfiles package.json dist/"],
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "git": {
@@ -16,7 +16,7 @@
   },
   "npm": {
     "publish": true,
-    "publishPath": "./lib"
+    "publishPath": "./dist"
   },
   "plugins": {
     "@release-it/keep-a-changelog": {
