@@ -16,6 +16,14 @@ Types of Changes
 
 ## [Unreleased]
 
+### Added
+
+- Can now get emails and phone numbers from People app.
+
+### Fixed
+
+- The wrong URL path was being used for creating donations.
+
 ## [0.1.4] - 2023-07-06
 
 ### Fixed

@@ -8,11 +8,7 @@ const client = new PCOApiClient({
   },
 });
 
-console.log(client.getAppPaths('giving'));
-// const json = { data: { type: 'Batch', attributes: { description: 'PCO API Client Test' } } };
-// client.callAppPath('giving', 'createBatch', { id: '123' }, { json }).then((value) => {
-//   console.dir(value);
-// }, undefined);
-client.giving('readDonations').then((value) => {
+console.log(client.getAppPaths('people'));
+client.people('readEmails', undefined, { searchParams: { 'where[address]': 'brannon.hall@gmail.com' } }).then((value) => {
   console.dir(value);
 }, undefined);
