@@ -1,4 +1,7 @@
-import { PathFactoryFunction, pathFactoryProvider } from '../pco-api-client/types.js';
+import {
+  PathFactoryFunction,
+  pathFactoryProvider,
+} from '../pco-api-client/types.js';
 import { ApplicationConfig } from './application.js';
 
 const paths = new Map<string, PathFactoryFunction>([

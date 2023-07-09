@@ -27,7 +27,10 @@ const paths = new Map<string, PathFactoryFunction>([
 
   // Donations
   ['readDonations', pathFactoryProvider('get', 'donations')],
-  ['createDonation', pathFactoryProvider('post', 'batches/{{ batch }}/donations')],
+  [
+    'createDonation',
+    pathFactoryProvider('post', 'batches/{{ batch }}/donations'),
+  ],
   ['updateDonation', pathFactoryProvider('patch', 'donations/{{ id }}')],
   ['deleteDonation', pathFactoryProvider('delete', 'donations/{{ id }}')],
   [
