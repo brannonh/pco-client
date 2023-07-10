@@ -42,6 +42,10 @@ export class PCOApiClient {
         token: options.auth.token,
         secret: options.auth.secret,
       },
+      log: {
+        request: options.log?.request,
+        response: options.log?.response,
+      },
     });
 
     this.functions = {

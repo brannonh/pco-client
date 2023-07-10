@@ -6,6 +6,10 @@ const client = new PCOApiClient({
     token,
     secret,
   },
+  log: {
+    request: true,
+    response: true,
+  },
 });
 
 console.log(client.getAppPaths('people'));

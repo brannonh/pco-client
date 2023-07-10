@@ -13,7 +13,7 @@ export class HttpClient {
 
   constructor(config: HttpClientConfig) {
     this.client = got.extend(
-      logging(),
+      logging(config.log?.request, config.log?.response),
       pcoApi(),
       auth(config.auth?.token ?? '', config.auth?.secret ?? '')
     );

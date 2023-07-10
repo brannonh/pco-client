@@ -16,6 +16,11 @@ Types of Changes
 
 ## [Unreleased]
 
+### Added
+
+- Responses are now logged.
+- Request / response logging is no configurable.
+
 ## [0.1.5] - 2023-07-09
 
 ### Added
