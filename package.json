@@ -1,6 +1,6 @@
 {
   "name": "pco-client",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Javascript client for the Planning Center Online API",
   "type": "module",
   "source": "src/index.ts",
