@@ -16,6 +16,8 @@ Types of Changes
 
 ## [Unreleased]
 
+## [0.1.7] - 2023-07-11
+
 ### Added
 
 - Can now get people from People app (go figure!).
@@ -77,7 +79,8 @@ Types of Changes
 
 - Added support for application-level GET requests.
 
-[unreleased]: https://github.com/brannonh/pco-client/compare/v0.1.6...HEAD
+[unreleased]: https://github.com/brannonh/pco-client/compare/v0.1.7...HEAD
+[0.1.7]: https://github.com/brannonh/pco-client/compare/v0.1.6...v0.1.7
 [0.1.6]: https://github.com/brannonh/pco-client/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/brannonh/pco-client/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/brannonh/pco-client/compare/v0.1.3...v0.1.4
