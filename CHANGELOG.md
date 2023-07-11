@@ -16,6 +16,14 @@ Types of Changes
 
 ## [Unreleased]
 
+### Added
+
+- Can now get people from People app (go figure!).
+
+### Changed
+
+- Renamed root paths.
+
 ## [0.1.6] - 2023-07-10
 
 ### Added

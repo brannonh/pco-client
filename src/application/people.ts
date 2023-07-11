@@ -6,7 +6,10 @@ import { ApplicationConfig } from './application.js';
 
 const paths = new Map<string, PathFactoryFunction>([
   // Root
-  ['people', pathFactoryProvider('get', '')],
+  ['root', pathFactoryProvider('get', '')],
+
+  // People
+  ['people', pathFactoryProvider('get', 'people')],
 
   // Emails
   ['readEmails', pathFactoryProvider('get', 'emails')],

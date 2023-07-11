@@ -12,10 +12,9 @@ const client = new PCOApiClient({
   },
 });
 
-console.log(client.getAppPaths('people'));
 client
-  .people('readEmails', undefined, {
-    searchParams: { 'where[address]': 'brannon.hall@gmail.com' },
+  .people('people', undefined, {
+    searchParams: { 'where[id]': '116361550' },
   })
   .then((value) => {
     console.dir(value);

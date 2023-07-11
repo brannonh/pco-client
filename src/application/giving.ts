@@ -6,7 +6,7 @@ import { ApplicationConfig } from './application.js';
 
 const paths = new Map<string, PathFactoryFunction>([
   // Root
-  ['giving', pathFactoryProvider('get', '')],
+  ['root', pathFactoryProvider('get', '')],
 
   // Batches
   ['readBatches', pathFactoryProvider('get', 'batches')],
