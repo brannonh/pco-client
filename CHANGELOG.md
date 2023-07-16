@@ -16,6 +16,10 @@ Types of Changes
 
 ## [Unreleased]
 
+### Added
+
+- Added rate limit header information to response object.
+
 ## [0.1.7] - 2023-07-11
 
 ### Added
