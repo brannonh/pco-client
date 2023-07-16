@@ -16,6 +16,8 @@ Types of Changes
 
 ## [Unreleased]
 
+## [0.1.8] - 2023-07-15
+
 ### Added
 
 - Added rate limit header information to response object.
@@ -83,7 +85,8 @@ Types of Changes
 
 - Added support for application-level GET requests.
 
-[unreleased]: https://github.com/brannonh/pco-client/compare/v0.1.7...HEAD
+[unreleased]: https://github.com/brannonh/pco-client/compare/v0.1.8...HEAD
+[0.1.8]: https://github.com/brannonh/pco-client/compare/v0.1.7...v0.1.8
 [0.1.7]: https://github.com/brannonh/pco-client/compare/v0.1.6...v0.1.7
 [0.1.6]: https://github.com/brannonh/pco-client/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/brannonh/pco-client/compare/v0.1.4...v0.1.5
