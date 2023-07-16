@@ -4,6 +4,10 @@ export interface PCOApiClientConfig {
     request?: boolean;
     response?: boolean;
   };
+  retry?: {
+    base?: number;
+    limit?: number;
+  };
 }
 
 export interface PCOApiClientAuthPAT {

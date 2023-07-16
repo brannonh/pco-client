@@ -16,6 +16,10 @@ Types of Changes
 
 ## [Unreleased]
 
+### Added
+
+- Retries can now be configured.
+
 ## [0.1.8] - 2023-07-15
 
 ### Added

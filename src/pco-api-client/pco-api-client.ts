@@ -46,6 +46,10 @@ export class PCOApiClient {
         request: options.log?.request,
         response: options.log?.response,
       },
+      retry: {
+        base: options.retry?.base,
+        limit: options.retry?.limit,
+      },
     });
 
     this.functions = {

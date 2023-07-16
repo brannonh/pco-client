@@ -10,6 +10,10 @@ const client = new PCOApiClient({
     request: true,
     response: true,
   },
+  retry: {
+    base: 1,
+    limit: 1,
+  },
 });
 
 client

@@ -1,6 +1,7 @@
 export interface HttpClientConfig {
   auth?: AuthPAT;
   log?: LogConfig;
+  retry?: RetryConfig;
 }
 
 export interface AuthPAT {
@@ -11,4 +12,9 @@ export interface AuthPAT {
 export interface LogConfig {
   request?: boolean;
   response?: boolean;
+}
+
+export interface RetryConfig {
+  base?: number;
+  limit?: number;
 }
